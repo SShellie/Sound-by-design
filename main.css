@@ -1,0 +1,224 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ background-image:url("./images/apple-music.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color: #D8D8D7;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  color: white;
+}
+
+h2 {
+  margin-left: 425px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 100;
+  z-index: -1;
+}
+
+i {
+  color : transparent;
+  text-shadow : 0 0 0 #000;
+}
+
+#buttonload {
+  color : transparent;
+  text-shadow : 0 0 0 #000;
+}
+
+audio:hover, audio:focus, audio:active {
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+opacity: 1;
+}
+
+audio {
+-webkit-transition:all 0.2s linear;
+-moz-transition:all 0.2s linear;
+-o-transition:all 0.2s linear;
+transition:all 0.2s linear;
+-moz-box-shadow: 2px 2px 4px 0px #454545;
+-webkit-box-shadow:  2px 2px 4px 0px #454545;
+box-shadow: 2px 2px 4px 0px #454545;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+opacity: .5;
+}
+
+.wrapper {
+  margin: 40px;
+}
+
+#search {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  height: 50vh;
+  width: 100%;
+  z-index: 3;
+  -webkit-transition:all 1.2s ease-out;
+  -moz-transition:all 1.2s ease-out;
+  -o-transition:all 1.2s ease-out;
+  transition:all 1.2s ease-out;
+}
+
+#transport {
+  display: flex;
+  justify-content: center;
+  margin: 150px 0 0 0;
+  opacity: 0;
+  -webkit-transition:all 2s ease-out;
+  -moz-transition:all 2s ease-out;
+  -o-transition:all 2s ease-out;
+  transition:all 2s ease-out;
+}
+
+#results {
+  display: none;
+  flex-direction:column;
+  align-items: center;
+}
+
+#stream-player {
+  display: none;
+}
+
+input{
+  width: 180px;
+  font-size: .7em;
+}
+
+#buttonload {
+display: flex;
+float: right;
+color : transparent;
+height: 90px;
+width: 80px;
+color: purple;
+font-weight: 900;
+}
+
+#searchInput {
+  align-self: flex-end;
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  padding: 0 1vw;
+  text-align: center;
+  -webkit-transition:all 0.2s linear;
+  -moz-transition:all 0.2s linear;
+  -o-transition:all 0.2s linear;
+  transition:all 0.2s linear;
+  -moz-box-shadow: 2px 2px 4px 0px #454545;
+  -webkit-box-shadow:  2px 2px 4px 0px #454545;
+  box-shadow: 2px 2px 4px 0px #454545;
+  -moz-border-radius:7px 7px 7px 7px ;
+  -webkit-border-radius:7px 7px 7px 7px ;
+  border-radius:7px 7px 7px 7px ;
+  opacity: 0.5;
+  color : transparent;
+  text-shadow : 0 0 0 #000;
+}
+
+#searchInput:hover {
+  -webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+  -moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+  box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 1;
+  color: BLUE;
+}
+
+#searchInput:focus {
+  outline: none;
+}
+
+#artists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 90vw;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.picture {
+  border-radius: 50%;
+}
+
+#tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 40px;
+  width: 90vw;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 20px 0;
+  font-size: .8em;
+  font-weight: 100;
+}
+
+.track .picture {
+  height: 100px;
+  width: 100px;
+}
+
+.track p {
+  width: 100%;
+}
+
+.track button {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  width: 70px;
+  height: 20px;
+  padding: 4px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 530px) {
+
+  #artists {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #tracks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 40px;
+    width: 90vw;
+}
+}
